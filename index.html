@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour of DOM</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <style>
+       .fruits-container li{
+            color:tomato;
+        }
+        #fruits-title{
+            color:black;
+        }
+        .important-places{
+           color: blueviolet; 
+        }
+    </style>
+</head>
+<body>
+ <header>
+    <h1>Welcome to my DOM</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui, reprehenderit! Porro quam minima voluptas cum repellat! Nulla dolorum et obcaecati temporibus labore sequi! Eaque cupiditate eveniet qui fugit, quasi rem.</p>
+ </header>  
+ <main>
+    <section>
+        <h1>My Awesome de baba</h1>
+        <ul>
+            <li>Jalali Set</li>
+            <li>Shafayet</li>
+            <li>Bonobash</li>
+            <li>dom de re baba</li>
+        </ul>
+    </section>
+    
+    <section class="fruits-container">
+        <h1 id="fruits-title">Fruits I Like</h1>
+        <ul>
+            <li>apple</li>
+            <li>orange</li>
+            <li>mango</li>
+        </ul>
+    </section>
+    <section id="places-container" class="large-text">
+       <h1 id="places-title">please come to visit</h1> 
+       <ul>
+     <li class="important-places">katabon</li>
+    <li class="important-places">sundarbon</li>
+     <li class="important-places">bandarban</li>
+        <li>shalban</li>
+       </ul>
+    </section>
+    
+ </main> 
+ <script src="js/dom.js"></script>
+ <script src="js/styleInJs.js"></script>
+ <script src="js/append.js"></script>
+ <script>
+    const liCollection =document.getElementsByTagName('li');
+   // console.log(liCollection);
+   for(const li of liCollection){
+  //  console.log(li.innerText);
+   }
+   const allHeadings = document.getElementsByTagName('h1');
+   for(const h1 of allHeadings){
+  //  console.log(h1.innerText);
+   }
+   const places = document.getElementsByClassName('important-places');
+   for(const place of places){
+    //console.log(place.innerText)
+   }
+   const fruitsTitle = document.getElementById('fruits-title');
+   //fruitsTitle.innerText = 'fruits changed by js';
+
+   //querySelectorAll
+   const someLi =document.querySelectorAll('.fruits-container li');
+  // console.log(someLi);
+   for(li of someLi){
+    //console.log(li.innerText);
+   }
+ </script>
+</body>
+</html>
